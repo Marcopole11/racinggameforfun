@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctif7v83804yy"]
+
+[sub_resource type="Curve3D" id="Curve3D_8pexn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 98.886, 0, -56.652, 0, 0, 0, 0, 0, 0, 116.715, 0, -195.718, 0, 0, 0, 0, 0, 0, 2.60941, 0, -350.83, 0, 0, 0, 0, 0, 0, -223.819, 0, -374.008, 0, 0, 0, 0, 0, 0, -421.72, 0, -279.514, 0, 0, 0, 0, 0, 0, -425.286, 0, -149.363, 0, 0, 0, 0, 0, 0, -311.181, 0, -12.0796, 0, 0, 0, 0, 0, 0, -239.865, 0, 155.513, 0, 0, 0, 0, 0, 0, -246.996, 0, 305.276, 0, 0, 0, 0, 0, 0, -275.523, 0, 405.119, 0, 0, 0, 0, 0, 0, -227.384, 0, 483.566, 0, 0, 0, 0, 0, 0, -84.7526, 0, 517.441, 0, 0, 0, 0, 0, 0, 36.4845, 0, 513.875, 0, 0, 0, 0, 0, 0, 170.202, 0, 469.303, 0, 0, 0, 0, 0, 0, 234.386, 0, 349.849, 0, 0, 0, 0, 0, 0, 253.998, 0, 242.875, 0, 0, 0, 0, 0, 0, 227.255, 0, 167.993, 0, 0, 0, 0, 0, 0, 129.195, 0, 71.7167, 0, 0, 0, 0, 0, 0, 102.452, 0, 30.71, 0, 0, 0, 0, 0, 0, 88.1885, 0, -19.2112, 0, 0, 0, 0, 0, 0, 98.886, 0, -56.652),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 21
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_8pexn")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+use_collision = true
+polygon = PackedVector2Array(0, 0, -11.6212, 0.816105, 11.489, 1.31141, 1, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = true
