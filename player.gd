@@ -4,15 +4,18 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+@onready var camera: Camera2D = $Camera2D
+
 func _process(delta: float) -> void:
 	var player_id = multiplayer.get_unique_id()
 	print(player_id)
-
-func _ready() -> void:
-	multiplayer.peer_disconnected.connect(on_peer_disconnected)
-
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
+	
+func _ready() -> void:
+	multiplayer.peer_disconnected.connect(on_peer_disconnected)
+	if is_multiplayer_authority():
+		camera.make_current
 
 
 func _physics_process(delta: float) -> void:

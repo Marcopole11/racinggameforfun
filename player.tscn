@@ -16,3 +16,5 @@ texture = ExtResource("2_1hfls")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_tsfvh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
