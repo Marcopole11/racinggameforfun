@@ -15,7 +15,7 @@ func _enter_tree() -> void:
 func _ready() -> void:
 	multiplayer.peer_disconnected.connect(on_peer_disconnected)
 	if is_multiplayer_authority():
-		camera.make_current
+		camera.enabled = true
 
 
 func _physics_process(delta: float) -> void:

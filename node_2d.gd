@@ -14,8 +14,8 @@ func _on_host_pressed() -> void:
 	multiplayer.multiplayer_peer = peer
 	multiplayer.peer_connected.connect(_add_player)
 	_add_player()
-	$Host.visible = false
-	$Join.visible = false
+	#$Host.visible = false
+	#$Join.visible = false
 func _add_player(id = 1):
 	var player = player_scene.instantiate()
 	player.name = str(id)
@@ -26,5 +26,5 @@ func _add_player(id = 1):
 func _on_join_pressed() -> void:
 	peer.create_client("25.54.158.67",1576)
 	multiplayer.multiplayer_peer = peer
-	$Host.visible = false
-	$Join.visible = false
+	#$Host.visible = false
+	#$Join.visible = false
